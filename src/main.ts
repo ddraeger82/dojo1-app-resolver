@@ -17,13 +17,9 @@ require({
 	require({
 		packages: [{ name: 'myDojo1Widget', location: dojo1SourceUrl + 'lib/app' }],
 		map: { myDojo1Widget: widgetMap }
-	}, ['app/widget', 'dojo/dom', 'dojo/dom-construct'], function(
-		widget: any,
-		dom: any,
-		domClass: any,
-		Deferred: any,
-		dojoRequest: any
-	) {
-		widget.setReceiver('Sitepen');
+	}, ['app/widget', 'dojo/dom', 'dojo/dom-construct'], function(widget: any, dom: any, domConstruct: any) {
+		var greetingNode = dom.byId('dojo1-container');
+		var who = widget.setReceiver('SitePen');
+		domConstruct.place('<em> ' + who + '!</em>', greetingNode);
 	});
 });
