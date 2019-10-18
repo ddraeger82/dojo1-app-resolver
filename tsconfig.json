@@ -22,7 +22,7 @@
 		"sourceMap": true,
 		"strict": true,
 		"target": "es5",
-		"types": [ "intern", "dojo" ]
+		"types": [ "dojo" ]
 	},
 	"include": [
 		"./typings/**/.d.ts",

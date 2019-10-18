@@ -3,12 +3,9 @@
     "version": "1.0.0",
     "scripts": {
         "prettier": "prettier --write 'src/**/*.ts' 'tests/**/*.ts'",
-        "dev": "dojo build --mode dev --single-bundle --watch file --serve -p 9997",
+        "dev": "dojo build --mode dev --watch file --serve -p 9997",
         "build:loaderConfig:dev": "cpx \"src/**/loaderConfig.js\" dist/dev",
-        "build": "npm-run-all -p build:** -s dojo-package",
-        "build:tests": "dojo build --legacy -m unit && dojo build --legacy -m functional",
-        "test-ci": "dojo build -m dist && npm run build:tests && dojo test -a -c \"browserstack\" --usr dylanschiemann2 -k 4Q2g8YAc9qeZzB2hECnS",
-        "test": "dojo build -m dist && npm run build:tests && dojo test -c local -a"
+        "build": "npm-run-all -p build:** -s dojo-package"
     },
     "dependencies": {
         "@dojo/framework": "^6.0.0",
@@ -18,11 +15,9 @@
     "devDependencies": {
         "@dojo/cli": "^6.0.0",
         "@dojo/cli-build-app": "^6.0.0",
-        "@dojo/cli-test-intern": "^6.0.0",
         "@types/dojo": "^1.9.40",
         "@types/node": "^6.0.46",
         "@types/sinon": "^1.16.35",
-        "intern": "4.3.1",
         "cpx": "~1.5.0",
         "prettier": "1.13.7",
         "typescript": "3.4.5"
