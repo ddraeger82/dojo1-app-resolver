@@ -1,0 +1,10 @@
+{
+	"build-app": {
+		"externals": {
+			"dependencies": [
+				{ "from": "loaderConfig.js", "inject": true }
+			]
+		}
+	},
+	"create-app": {}
+}
